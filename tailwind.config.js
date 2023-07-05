@@ -7,12 +7,21 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      gridTemplateColumns: {
+        header: 'auto 1fr',
+      },
+      colors: {
+        cyclamen: '#f06c9b',
+        'black-custom': '#020402',
+      },
+      boxShadow: {
+        button: '3px 3px 0 0',
+      },
+      transitionDuration: {
+        DEFAULT: '250ms',
       },
     },
   },
+  darkMode: 'class',
   plugins: [],
-}
+};
