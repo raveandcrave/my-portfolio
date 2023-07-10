@@ -1,0 +1,20 @@
+.wrapper {
+  gap: 0 120px;
+  grid-template:
+    'header header header' auto
+    '. main .' 1fr
+    'footer footer footer' auto / auto minmax(320px, 1200px) auto;
+  display: grid;
+}
+
+.header {
+  grid-area: header;
+}
+
+.main {
+  grid-area: main;
+}
+
+.footer {
+  grid-area: footer;
+}

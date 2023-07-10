@@ -1,18 +1,20 @@
-import { ValidLocale, getLocalePartsFrom, locales } from "@/i18n";
-import "../globals.css";
-import { Inter } from "next/font/google";
-import Header from "@/components/Header/Header";
-import Footer from "@/components/Footer/Footer";
+import {ValidLocale, getLocalePartsFrom, locales} from '@/i18n';
+import '../globals.css';
+import {Inter} from 'next/font/google';
+import Header from '@/components/Header/Header';
+import Footer from '@/components/Footer/Footer';
+import {Providers} from '../Theme/Providers';
+import styles from './Layout.module.css';
 
-const inter = Inter({ subsets: ["latin", "cyrillic"] });
+const inter = Inter({subsets: ['latin', 'cyrillic']});
 
 export const metadata = {
-  title: "Viktor Kopan",
-  description: "Frontend developer portfolio",
+  title: 'Viktor Kopan',
+  description: 'Frontend developer portfolio',
 };
 
 export async function generateStaticParams() {
-  return locales.map((locale) => getLocalePartsFrom({ locale }));
+  return locales.map((locale) => getLocalePartsFrom({locale}));
 }
 
 export default function RootLayout({
@@ -26,11 +28,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang={params.lang}>
-      <body className={inter.className}>
-        <Header />
-        <main>{children}</main>
-        <Footer />
-      </body>
+      <Providers>
+        <body className={inter.className}>
+          <div className={styles.wrapper}>
+            <Header className={styles.header} lang={params.lang} />
+            <main className={styles.main}>{children}</main>
+            <Footer className={styles.footer} />
+          </div>
+        </body>
+      </Providers>
     </html>
   );
 }

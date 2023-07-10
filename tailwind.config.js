@@ -11,7 +11,7 @@ module.exports = {
         header: 'auto 1fr',
       },
       colors: {
-        cyclamen: '#f06c9b',
+        cyclamen: '#f14d88',
         'black-custom': '#020402',
       },
       boxShadow: {

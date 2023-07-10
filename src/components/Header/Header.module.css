@@ -1,0 +1,17 @@
+.header {
+  @apply bg-sky-100 px-10 dark:text-blue-500 h-20 grid grid-cols-header gap-3 fixed top-0 left-0 right-0 z-10 shadow-lg;
+}
+
+.menu {
+  @apply grid gap-5 grid-cols-2 items-center;
+
+  grid-template-columns: repeat(3, auto);
+}
+
+.menuLink {
+  @apply relative cursor-pointer hover:text-cyclamen transition-all duration-300 after:block after:h-[3px] after:w-0 after:bg-cyclamen after:absolute after:left-0 after:top-full hover:after:w-full;
+}
+
+.menuLink::after {
+  transition: width 0.25s ease-in-out;
+}
