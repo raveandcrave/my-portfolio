@@ -1,0 +1,11 @@
+.h1 {
+  @apply text-cyclamen text-7xl font-semibold;
+}
+
+.h2 {
+  @apply text-cyclamen text-4xl font-semibold;
+}
+
+.h3 {
+  @apply text-cyclamen text-3xl font-semibold;
+}

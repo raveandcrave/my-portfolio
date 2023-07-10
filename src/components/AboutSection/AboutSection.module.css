@@ -1,0 +1,5 @@
+.skillsList {
+  @apply grid gap-x-8 gap-y-1;
+
+  grid-template-columns: repeat(2, minmax(100px, 250px));
+}

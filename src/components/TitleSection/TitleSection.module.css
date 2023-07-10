@@ -1,0 +1,7 @@
+.titleSection {
+  @apply grid items-center min-h-screen;
+}
+
+.h1 {
+  @apply text-black-custom text-7xl;
+}

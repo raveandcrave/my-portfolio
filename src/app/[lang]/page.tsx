@@ -1,4 +1,6 @@
-import { ValidLocale, getDictionary } from "@/i18n";
+import {ValidLocale, getDictionary} from '@/i18n';
+import TitleSection from '@/components/TitleSection/TitleSection';
+import AboutSection from '@/components/AboutSection/AboutSection';
 
 interface HomePageProps {
   params: {
@@ -6,12 +8,13 @@ interface HomePageProps {
   };
 }
 
-export default async function Home({ params: { lang } }: HomePageProps) {
+export default async function Home({params: {lang}}: HomePageProps) {
   const dict = await getDictionary(lang);
 
   return (
     <>
-      <h1>{dict.home.title}</h1>
+      <TitleSection />
+      <AboutSection />
     </>
   );
 }
