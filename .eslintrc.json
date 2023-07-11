@@ -12,9 +12,5 @@
     "react/react-in-jsx-scope": "off",
     "prettier/prettier": "error"
   },
-  "extends": [
-    "plugin:@typescript-eslint/recommended",
-    "next/core-web-vitals",
-    "plugin:prettier/recommended"
-  ]
+  "extends": ["plugin:@typescript-eslint/recommended", "next/core-web-vitals", "plugin:prettier/recommended"]
 }
