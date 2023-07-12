@@ -1,0 +1,3 @@
+.wrapper {
+  @apply border-r-4 border-cyclamen pr-6 grid grid-cols-3 gap-8;
+}

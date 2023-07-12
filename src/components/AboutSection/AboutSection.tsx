@@ -8,7 +8,9 @@ const skills = [
   'JavaScript (ES6+)',
   'TypeScript',
   'CSS/SASS/CSS Modules',
+  'Tailwind CSS',
   'React/Redux',
+  'Next.js',
   'Git',
   'Webpack',
   'Docker',
@@ -17,12 +19,12 @@ const skills = [
 
 const AboutSection = () => {
   return (
-    <section className="px-10 py-24">
+    <section className="py-24">
       <Title tag="h2" className="mb-10">
         Обо Мне
       </Title>
       <div className="grid gap-12 grid-cols-5">
-        <div className="col-span-3 border-l-4 border-cyclamen pl-3">
+        <div className="col-span-3 border-l-4 border-cyclamen pl-6">
           <p className="mb-5">
             Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее
             осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в

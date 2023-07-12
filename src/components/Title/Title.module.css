@@ -7,5 +7,5 @@
 }
 
 .h3 {
-  @apply text-cyclamen text-3xl font-semibold;
+  @apply text-cyclamen text-2xl font-semibold;
 }
