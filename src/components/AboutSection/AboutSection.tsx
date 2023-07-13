@@ -3,6 +3,7 @@ import Title from '@/components/Title/Title';
 import styles from './AboutSection.module.css';
 import Papich from '@/assets/papich.jpg';
 import FireIcon from './fire.svg?svgr';
+import SectionMotion from '@/components/SectionMotion/SectionMotion';
 
 const skills = [
   'JavaScript (ES6+)',
@@ -19,7 +20,7 @@ const skills = [
 
 const AboutSection = () => {
   return (
-    <section className="py-24">
+    <SectionMotion className="py-24">
       <Title tag="h2" className="mb-10">
         Обо Мне
       </Title>
@@ -51,7 +52,7 @@ const AboutSection = () => {
           </div>
         </div>
       </div>
-    </section>
+    </SectionMotion>
   );
 };
 

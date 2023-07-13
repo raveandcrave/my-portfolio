@@ -1,9 +1,16 @@
-import {FC} from 'react';
+import {ForwardedRef, forwardRef} from 'react';
+import {motion} from 'framer-motion';
 import {ButtonProps} from './Button.props';
 import styles from './Button.module.css';
 
-const Button: FC<ButtonProps> = ({children, className}) => {
-  return <button className={`${className} ${styles.button}`}>{children}</button>;
-};
+export const Button = forwardRef(({children, className}: ButtonProps, ref: ForwardedRef<HTMLButtonElement>) => {
+  return (
+    <button ref={ref} className={`${className} ${styles.button}`}>
+      {children}
+    </button>
+  );
+});
 
-export default Button;
+Button.displayName = 'Button';
+
+export default motion(Button);
