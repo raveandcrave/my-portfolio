@@ -1,0 +1,35 @@
+.email {
+  @apply fixed bottom-0 right-10 left-auto z-10;
+
+  writing-mode: vertical-rl;
+}
+
+.emailWrapper {
+  @apply flex items-center relative after:block after:w-[1px] after:h-20 after:my-auto after:mx-0 after:bg-black-custom;
+}
+
+.emailLink {
+  @apply inline-block my-5 hover:text-cyclamen text-sm relative p-2 transition-all hover:-translate-y-2;
+}
+
+.social {
+  @apply fixed bottom-0 right-auto left-10 z-10;
+
+  writing-mode: vertical-rl;
+}
+
+.socialList {
+  @apply flex items-center after:block after:w-[1px] after:h-20 after:my-auto after:mx-0 after:bg-black-custom;
+}
+
+.socialListItem {
+  @apply last:mb-5;
+}
+
+.socialLink {
+  @apply block p-2;
+}
+
+.socialIcon {
+  @apply fill-black-custom transition-all;
+}

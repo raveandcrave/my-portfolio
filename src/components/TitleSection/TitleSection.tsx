@@ -5,7 +5,7 @@ const TitleSection = () => {
   return (
     <section className={styles.titleSection}>
       <div>
-        <span className="ml-1">Привет! Меня зовут</span>
+        <span className="ml-1 dark:text-green-200">Привет! Меня зовут</span>
         <Title tag="h1">Виктор Копань.</Title>
         <h2 className="text-7xl font-semibold">Я frontend разработчик.</h2>
         <p className="text-xl mt-9 max-w-lg">
