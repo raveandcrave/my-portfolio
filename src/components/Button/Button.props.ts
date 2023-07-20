@@ -1,7 +1,7 @@
-import {DetailedHTMLProps, HTMLAttributes} from 'react';
+import {DetailedHTMLProps, ButtonHTMLAttributes} from 'react';
 
 export interface ButtonProps
   extends Omit<
-    DetailedHTMLProps<HTMLAttributes<HTMLButtonElement>, HTMLButtonElement>,
+    DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>,
     'onAnimationStart' | 'onDragStart' | 'onDragEnd' | 'onDrag' | 'ref'
   > {}

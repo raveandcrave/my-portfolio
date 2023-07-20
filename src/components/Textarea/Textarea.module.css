@@ -1,0 +1,7 @@
+.textarea {
+  @apply px-4 py-3 border-b border-gray-500 w-full focus:border-cyclamen focus:border-b outline-cyclamen resize-none;
+}
+
+.error {
+  @apply border-red-400 rounded border;
+}

@@ -1,0 +1,7 @@
+.input {
+  @apply px-4 py-3 border-b border-gray-500 w-full focus:border-cyclamen outline-cyclamen;
+}
+
+.error {
+  @apply border-red-400 rounded border;
+}
