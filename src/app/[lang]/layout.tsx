@@ -6,6 +6,7 @@ import Footer from '@/components/Footer/Footer';
 import {Providers} from '../Theme/Providers';
 import styles from './Layout.module.css';
 import BlackScreen from '@/components/BlackScreen/BlackScreen';
+import Up from '@/components/Up/Up';
 
 const inter = Inter({subsets: ['latin', 'cyrillic']});
 
@@ -36,6 +37,7 @@ export default function RootLayout({
             <Header className={styles.header} lang={params.lang} />
             <main className={styles.main}>{children}</main>
             <Footer className={styles.footer} />
+            <Up />
           </div>
         </body>
       </Providers>
