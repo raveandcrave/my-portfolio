@@ -25,13 +25,13 @@ const Header = ({lang, className}: HeaderProps) => {
   };
 
   return (
-    <header className={cn(styles.header, className)}>
+    <header className={cn(styles.header, 'dark:bg-slate-700', className)}>
       <nav className="grid items-center gap-5 grid-cols-2">
         <ul className={styles.menu}>
           {menu.map((item, i) => (
-            <motion.li initial="hidden" animate="visible" variants={navVariants} custom={i + 1} key={item}>
-              <a className={styles.menuLink}>
-                <span className="text-cyclamen">0{i + 1}.</span> {item}
+            <motion.li tabIndex={0} initial="hidden" animate="visible" variants={navVariants} custom={i + 1} key={item}>
+              <a className={cn(styles.menuLink, 'dark:hover:text-green-200')}>
+                <span className="text-cyclamen dark:text-green-200">0{i + 1}.</span> {item}
               </a>
             </motion.li>
           ))}

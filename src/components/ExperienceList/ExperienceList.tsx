@@ -50,9 +50,9 @@ const ExperienceBlock = () => {
             variants={experienceListVariants}
             custom={i + 1}
             key={title}
-            className="col-span-2 even:col-start-2 p-5 rounded shadow-xl">
+            className="col-span-2 even:col-start-2 p-5 rounded shadow-xl bg-sky-50 dark:bg-slate-700">
             <Title tag="h3">{title}</Title>
-            <div className="font-light text-slate-500">{dates}</div>
+            <div className="font-light text-slate-500 dark:text-green-200">{dates}</div>
             {tags && (
               <ul className="flex-wrap flex gap-2 mt-2">
                 {tags.map((tag) => (

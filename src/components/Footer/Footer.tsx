@@ -21,7 +21,7 @@ const Footer = ({className}: {className: string}) => {
           <li className={styles.socialListItem}>
             <a href="https://github.com/raveandcrave" target="_blank" className={`group ${styles.socialLink}`}>
               <GithubIcon
-                className={`${styles.socialIcon} group-hover:fill-cyclamen group-hover:-translate-y-2 dark:group-hover:fill-green-200`}
+                className={`${styles.socialIcon} group-hover:fill-cyclamen group-hover:-translate-y-2 dark:fill-slate-300 dark:group-hover:fill-green-200`}
                 width={25}
                 height={25}
               />
@@ -30,7 +30,7 @@ const Footer = ({className}: {className: string}) => {
           <li className={styles.socialListItem}>
             <a href="#" className={`group ${styles.socialLink}`}>
               <LinkedinIcon
-                className={`${styles.socialIcon} group-hover:fill-cyclamen group-hover:-translate-y-2 dark:group-hover:fill-green-200`}
+                className={`${styles.socialIcon} group-hover:fill-cyclamen group-hover:-translate-y-2 dark:fill-slate-300 dark:group-hover:fill-green-200`}
                 width={25}
                 height={25}
               />
@@ -39,7 +39,7 @@ const Footer = ({className}: {className: string}) => {
           <li className={styles.socialListItem}>
             <a href="https://www.instagram.com/rave_and_crave" target="_blank" className={`group ${styles.socialLink}`}>
               <InstagramIcon
-                className={`${styles.socialIcon} group-hover:fill-cyclamen group-hover:-translate-y-2 dark:group-hover:fill-green-200`}
+                className={`${styles.socialIcon} group-hover:fill-cyclamen group-hover:-translate-y-2 dark:fill-slate-300 dark:group-hover:fill-green-200`}
                 width={25}
                 height={25}
               />
