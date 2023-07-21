@@ -20,7 +20,7 @@ const skills = [
 
 const AboutSection = () => {
   return (
-    <SectionMotion className="py-24">
+    <SectionMotion className="py-24" id="about">
       <Title tag="h2" className="mb-10">
         Обо Мне
       </Title>

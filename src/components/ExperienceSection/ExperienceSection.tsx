@@ -4,7 +4,7 @@ import SectionMotion from '../SectionMotion/SectionMotion';
 
 const ExperienceSection = () => {
   return (
-    <SectionMotion className="py-24 mx-auto">
+    <SectionMotion className="py-24 mx-auto" id="experience">
       <Title tag="h2" className="mb-10">
         Мой путь
       </Title>

@@ -1,4 +1,5 @@
 'use client';
+import {KeyboardEvent} from 'react';
 import cn from 'classnames';
 import {motion, Variants} from 'framer-motion';
 import ThemeSwitcher from '../ThemeSwitcher/ThemeSwitcher';
@@ -6,8 +7,7 @@ import {HeaderProps} from './Header.props';
 
 import styles from './Header.module.css';
 import Button from '../Button/Button';
-
-const menu = ['обо мне', 'опыт', 'связаться'];
+const menu = ['about', 'experience', 'contact'];
 
 const Header = ({lang, className}: HeaderProps) => {
   const navVariants: Variants = {
@@ -24,13 +24,27 @@ const Header = ({lang, className}: HeaderProps) => {
     }),
   };
 
+  const handleKey = (e: KeyboardEvent<HTMLAnchorElement>, item: string) => {
+    if (e.code === 'Space' || e.code === 'Enter') {
+      scrollToSection(item);
+    }
+  };
+
+  const scrollToSection = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({behavior: 'smooth', block: 'start'});
+  };
+
   return (
     <header className={cn(styles.header, 'dark:bg-slate-700', className)}>
       <nav className="grid items-center gap-5 grid-cols-2">
         <ul className={styles.menu}>
           {menu.map((item, i) => (
-            <motion.li tabIndex={0} initial="hidden" animate="visible" variants={navVariants} custom={i + 1} key={item}>
-              <a className={cn(styles.menuLink, 'dark:hover:text-green-200')}>
+            <motion.li initial="hidden" animate="visible" variants={navVariants} custom={i + 1} key={item}>
+              <a
+                tabIndex={0}
+                className={cn(styles.menuLink, 'dark:hover:text-green-200')}
+                onClick={() => scrollToSection(item)}
+                onKeyDown={(e) => handleKey(e, item)}>
                 <span className="text-cyclamen dark:text-green-200">0{i + 1}.</span> {item}
               </a>
             </motion.li>
@@ -45,7 +59,7 @@ const Header = ({lang, className}: HeaderProps) => {
           Резюме
         </Button>
       </nav>
-      <div className="justify-self-end">
+      <div className="justify-self-end flex gap-5 items-center">
         <ThemeSwitcher />
         <button>язык {lang}</button>
       </div>

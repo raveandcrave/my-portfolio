@@ -1,6 +1,7 @@
 'use client';
 
 import {useForm} from 'react-hook-form';
+import SectionMotion from '../SectionMotion/SectionMotion';
 import {Button} from '../Button/Button';
 import Input from '../Input/Input';
 import Textarea from '../Textarea/Textarea';
@@ -45,7 +46,7 @@ const FormSection = () => {
   };
 
   return (
-    <section className="py-24">
+    <SectionMotion className="py-24" id="contact">
       <Title tag="h2" className="mb-10 mx-auto text-center">
         Связаться
       </Title>
@@ -80,7 +81,7 @@ const FormSection = () => {
           Отправить
         </Button>
       </form>
-    </section>
+    </SectionMotion>
   );
 };
 
