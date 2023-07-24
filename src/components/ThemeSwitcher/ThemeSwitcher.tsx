@@ -34,12 +34,7 @@ const ThemeSwitcher = () => {
         className={styles.container}
         title={isDark ? 'Activate light mode' : 'Activate dark mode'}
         aria-label={isDark ? 'Activate light mode' : 'Activate dark mode'}>
-        <input
-          type="checkbox"
-          checked={!isDark}
-          defaultChecked={!isDark}
-          onChange={(e) => handleOnChange(e.target.checked)}
-        />
+        <input type="checkbox" checked={!isDark} onChange={(e) => handleOnChange(e.target.checked)} />
         <div />
       </label>
     </div>
