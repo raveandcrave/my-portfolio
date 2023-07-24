@@ -1,64 +1,48 @@
-import langParser from 'accept-language-parser';
-import {NextResponse} from 'next/server';
-import type {NextRequest} from 'next/server';
+import {NextRequest, NextResponse} from 'next/server';
+import acceptLanguage from 'accept-language';
+import {fallbackLng, languages} from './app/i18n/settings';
 
-import {getLocalePartsFrom, defaultLocale, locales} from './i18n';
-
-const findBestMatchingLocale = (acceptLangHeader: string) => {
-  const parsedLangs = langParser.parse(acceptLangHeader);
-
-  for (let i = 0; i < parsedLangs.length; i++) {
-    const parsedLang = parsedLangs[i];
-
-    const matchedLanguage = locales.find((locale) => {
-      const localeParts = getLocalePartsFrom({locale});
-      return parsedLang.code === localeParts.lang;
-    });
-
-    if (matchedLanguage) {
-      return matchedLanguage;
-    }
-  }
-
-  return defaultLocale;
-};
-
-export function middleware(request: NextRequest) {
-  const pathname = request.nextUrl.pathname;
-
-  const defaultLocaleParts = getLocalePartsFrom({locale: defaultLocale});
-  const currentPathnameParts = getLocalePartsFrom({pathname});
-
-  if (currentPathnameParts.lang === defaultLocaleParts.lang) {
-    return NextResponse.redirect(
-      new URL(
-        pathname.replace(
-          `/${defaultLocaleParts.lang}/${defaultLocaleParts.country}`,
-          pathname.startsWith('/') ? '/' : ''
-        ),
-        request.url
-      )
-    );
-  }
-
-  const pathnameIsMissingValidLocale = locales.every((locale) => {
-    const localeParts = getLocalePartsFrom({locale});
-
-    return !pathname.startsWith(`/${localeParts.lang}`);
-  });
-
-  if (pathnameIsMissingValidLocale) {
-    const matchedLocale = findBestMatchingLocale(request.headers.get('Accept-Language') || defaultLocale);
-
-    if (matchedLocale !== defaultLocale) {
-      const matchedLocaleParts = getLocalePartsFrom({locale: matchedLocale});
-      return NextResponse.redirect(new URL(`/${matchedLocaleParts.lang}${pathname}`, request.url));
-    } else {
-      return NextResponse.rewrite(new URL(`/${defaultLocaleParts.lang}${pathname}`, request.url));
-    }
-  }
-}
+acceptLanguage.languages(languages);
 
 export const config = {
-  matcher: ['/((?!api|_next/static|_next/image|assets|favicon.ico|sw.js).*)'],
+  matcher: '/:lang*',
 };
+
+const cookieName = 'i18next';
+
+export function middleware(request: NextRequest) {
+  let lng;
+
+  if (request.cookies.has(cookieName)) {
+    //если в куках есть язык то ставим его
+    lng = acceptLanguage.get(request.cookies.get(cookieName)?.value);
+  }
+
+  if (!lng) {
+    //если нет в куках то берем его из хэдеров
+    lng = acceptLanguage.get(request.headers.get('Accept-Language'));
+  }
+
+  if (!lng) {
+    //если языка все еще нет то дефолтный
+    lng = fallbackLng;
+  }
+
+  if (request.nextUrl.pathname === '/') {
+    return NextResponse.redirect(new URL(`/${lng}`, request.url));
+  }
+
+  if (request.headers.has('referer')) {
+    const refererUrl = new URL(request.headers.get('referer') ?? `/${lng}`);
+    const langInReferer = languages.find((l) => refererUrl.pathname.startsWith(`/${l}`));
+    const response = NextResponse.next();
+
+    if (langInReferer) {
+      response.cookies.set(cookieName, langInReferer);
+    }
+
+    return response;
+  }
+
+  return NextResponse.next();
+}

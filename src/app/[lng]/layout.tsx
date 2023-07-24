@@ -1,4 +1,6 @@
-import {ValidLocale, getLocalePartsFrom, locales} from '@/i18n';
+import {dir} from 'i18next';
+import {languages} from '../i18n/settings';
+
 import '../globals.css';
 import {Inter} from 'next/font/google';
 import Header from '@/components/Header/Header';
@@ -16,25 +18,25 @@ export const metadata = {
 };
 
 export async function generateStaticParams() {
-  return locales.map((locale) => getLocalePartsFrom({locale}));
+  return languages.map((lng) => ({lng}));
 }
 
 export default function RootLayout({
   children,
-  params,
+  params: {lng},
 }: {
   children: React.ReactNode;
   params: {
-    lang: ValidLocale;
+    lng: string;
   };
 }) {
   return (
-    <html lang={params.lang}>
+    <html lang={lng} dir={dir(lng)}>
       <Providers>
         <body className={inter.className}>
           <div className={styles.wrapper}>
             <BlackScreen />
-            <Header className={styles.header} lang={params.lang} />
+            <Header className={styles.header} lang={lng} />
             <main className={styles.main}>{children}</main>
             <Footer className={styles.footer} />
             <Up />

@@ -3,13 +3,18 @@ import {KeyboardEvent} from 'react';
 import cn from 'classnames';
 import {motion, Variants} from 'framer-motion';
 import ThemeSwitcher from '../ThemeSwitcher/ThemeSwitcher';
+import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher';
+import Button from '../Button/Button';
 import {HeaderProps} from './Header.props';
+import {useTranslation} from '@/app/i18n/client';
 
 import styles from './Header.module.css';
-import Button from '../Button/Button';
-const menu = ['about', 'experience', 'contact'];
+
+const menu = ['about', 'experience', 'contact'] as const;
 
 const Header = ({lang, className}: HeaderProps) => {
+  const {t} = useTranslation(lang, 'header');
+
   const navVariants: Variants = {
     hidden: {
       opacity: 0,
@@ -45,7 +50,7 @@ const Header = ({lang, className}: HeaderProps) => {
                 className={cn(styles.menuLink, 'dark:hover:text-green-200')}
                 onClick={() => scrollToSection(item)}
                 onKeyDown={(e) => handleKey(e, item)}>
-                <span className="text-cyclamen dark:text-green-200">0{i + 1}.</span> {item}
+                <span className="text-cyclamen dark:text-green-200">0{i + 1}.</span> {t(item)}
               </a>
             </motion.li>
           ))}
@@ -56,12 +61,12 @@ const Header = ({lang, className}: HeaderProps) => {
           variants={navVariants}
           custom={menu.length - 1}
           className="justify-self-start">
-          Резюме
+          {t('resume')}
         </Button>
       </nav>
       <div className="justify-self-end flex gap-5 items-center">
         <ThemeSwitcher />
-        <button>язык {lang}</button>
+        <LanguageSwitcher lng={lang} />
       </div>
     </header>
   );
