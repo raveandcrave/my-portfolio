@@ -5,6 +5,9 @@ interface Resources {
     contact: 'contact';
     resume: 'resume';
   };
+  meta: {
+    title: 'Viktor Kopan Frontend developer';
+  };
   translation: {
     'title-section': {
       name: 'Viktor Kopan.';
