@@ -18,7 +18,7 @@ export default async function Home({params: {lng}}: HomePageProps) {
       <TitleSection t={t} />
       <AboutSection t={t} />
       <ExperienceSection t={t} />
-      <FormSection />
+      <FormSection t={t} />
     </>
   );
 }
