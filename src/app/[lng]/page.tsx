@@ -1,9 +1,8 @@
-// import {ValidLocale, getDictionary} from '@/i18n';
 import TitleSection from '@/components/TitleSection/TitleSection';
 import AboutSection from '@/components/AboutSection/AboutSection';
 import ExperienceSection from '@/components/ExperienceSection/ExperienceSection';
 import FormSection from '@/components/FormSection/FormSection';
-import {useTranslation} from '../i18n';
+import {useTranslation} from '@/app/i18n';
 
 interface HomePageProps {
   params: {
@@ -17,8 +16,8 @@ export default async function Home({params: {lng}}: HomePageProps) {
   return (
     <>
       <TitleSection t={t} />
-      <AboutSection />
-      <ExperienceSection />
+      <AboutSection t={t} />
+      <ExperienceSection t={t} />
       <FormSection />
     </>
   );

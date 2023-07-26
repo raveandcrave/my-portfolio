@@ -3,6 +3,44 @@
     "name": "Viktor Kopan.",
     "hello": "Hello! My name is",
     "developer": "I'm frontend developer.",
-    "description": "Я специализируюсь на воплощении в жизнь удобных и отзывчивых пользовательских интерфейсов. Буду рад запустить или улучшить ваш продукт"
+    "description": "I specialize in bringing user-friendly and responsive user interfaces to life. I will be glad to launch or improve your product"
+  },
+  "about-section": {
+    "title": "About Me",
+    "description": "Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей. Текст генерируется абзацами случайным образом от двух до десяти предложений в абзаце, что позволяет сделать текст более привлекательным и живым для визуально-слухового восприятия.",
+    "skills-title": "Here are the technologies I work with:",
+    "image-alt": "Фото"
+  },
+  "experience-section": {
+    "title": "My Way",
+    "omstu": {
+      "title": "Omsk State Technical University",
+      "dates": "2016-2020",
+      "description": "Bachelor. Energy Institute. Power industry and electrical engineering. Although it was not specifically intended for future work, but here I gained knowledge about the basic concepts in programming and in the end I realized that my interest lies in web development."
+    },
+    "freelance": {
+      "title": "Freelance",
+      "dates": "March - September 2021",
+      "description": "HTML. Responsive layout of sites landing on October CMS"
+    },
+    "krds": {
+      "title": "Omsk State Technical University",
+      "dates": "2016-2020",
+      "description": "Bachelor. Energy Institute. Power industry and electrical engineering. Although it was not specifically intended for future work, but here I gained knowledge about the basic concepts in programming and in the end I realized that my interest lies in web development."
+    }
+  },
+  "contact-section": {
+    "title": "Contact",
+    "name": "name",
+    "email": "email",
+    "message": "message",
+    "invalid": "invalid",
+    "maxLength": "maximum symbols",
+    "required": {
+      "name": "name is required",
+      "email": "email is required",
+      "message": "message is required"
+    },
+    "submit": "Contact me"
   }
 }

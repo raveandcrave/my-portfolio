@@ -5,7 +5,7 @@ import '../globals.css';
 import {Inter} from 'next/font/google';
 import Header from '@/components/Header/Header';
 import Footer from '@/components/Footer/Footer';
-import {Providers} from '../Theme/Providers';
+import {Providers} from '../Providers/Providers';
 import styles from './Layout.module.css';
 import BlackScreen from '@/components/BlackScreen/BlackScreen';
 import Up from '@/components/Up/Up';
@@ -32,7 +32,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang={lng} dir={dir(lng)}>
-      <Providers>
+      <Providers lng={lng}>
         <body className={inter.className}>
           <div className={styles.wrapper}>
             <BlackScreen />
