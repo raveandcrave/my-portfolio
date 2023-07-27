@@ -1,15 +1,13 @@
 .header {
-  @apply bg-sky-100 px-10 h-20 grid grid-cols-header gap-3 fixed top-0 left-0 right-0 z-10 shadow-lg;
+  @apply bg-sky-100 p-5 md:px-10 md:h-20 grid md:grid-cols-header gap-3 md:fixed absolute top-0 left-0 right-0 z-10 shadow-lg;
 }
 
 .menu {
-  @apply grid gap-5 grid-cols-2 items-center;
-
-  grid-template-columns: repeat(3, auto);
+  @apply grid gap-5 md:grid-cols-3 items-center;
 }
 
 .menuLink {
-  @apply relative cursor-pointer hover:text-cyclamen transition-all duration-300 after:block after:h-[3px] after:w-0 after:bg-cyclamen after:absolute after:left-0 after:top-full hover:after:w-full;
+  @apply relative cursor-pointer md:justify-self-center hover:text-cyclamen transition-all duration-300 after:block after:h-[3px] after:w-0 after:bg-cyclamen after:absolute after:left-0 after:top-full hover:after:w-full;
 }
 
 .menuLink::after {

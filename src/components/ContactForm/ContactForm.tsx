@@ -59,7 +59,7 @@ const ContactForm = () => {
   }
 
   return (
-    <form className="grid grid-cols-1 gap-6 w-1/2 mx-auto" onSubmit={handleSubmit(onSubmit)}>
+    <form className="grid grid-cols-1 gap-6 md:w-1/2 md:mx-auto" onSubmit={handleSubmit(onSubmit)}>
       <Input
         placeholder={t('contact-section.name')}
         error={errors.name}

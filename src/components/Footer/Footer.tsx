@@ -15,7 +15,7 @@ const Footer = ({className}: {className: string}) => {
           delay: 1,
         },
       }}
-      className={className}>
+      className={`${className} ${styles.wrapper}`}>
       <div className={styles.social}>
         <ul className={`${styles.socialList} dark:after:bg-slate-400`}>
           <li className={styles.socialListItem}>

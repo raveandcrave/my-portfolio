@@ -1,11 +1,13 @@
-.email {
-  @apply fixed bottom-0 right-10 left-auto z-10;
+.wrapper {
+  @apply flex flex-col gap-2 justify-center items-center;
+}
 
-  writing-mode: vertical-rl;
+.email {
+  @apply md:fixed md:bottom-0 md:right-10 md:left-auto md:z-10 md:[writing-mode:vertical-lr];
 }
 
 .emailWrapper {
-  @apply flex items-center relative after:block after:w-[1px] after:h-20 after:my-auto after:mx-0 after:bg-black-custom;
+  @apply flex items-center relative after:hidden md:after:block after:w-[1px] after:h-20 after:my-auto after:mx-0 after:bg-black-custom;
 }
 
 .emailLink {
@@ -13,17 +15,15 @@
 }
 
 .social {
-  @apply fixed bottom-0 right-auto left-10 z-10;
-
-  writing-mode: vertical-rl;
+  @apply md:fixed md:bottom-0 md:right-auto md:left-10 md:z-10 md:[writing-mode:vertical-lr];
 }
 
 .socialList {
-  @apply flex items-center after:block after:w-[1px] after:h-20 after:my-auto after:mx-0 after:bg-black-custom;
+  @apply flex items-center after:hidden md:after:block after:w-[1px] after:h-20 after:my-auto after:mx-0 after:bg-black-custom;
 }
 
 .socialListItem {
-  @apply last:mb-5;
+  @apply md:last:mb-5;
 }
 
 .socialLink {

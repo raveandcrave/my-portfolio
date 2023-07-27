@@ -6,7 +6,7 @@ import {FormSectionProps} from './FromSection.props';
 
 const FormSection = ({t}: FormSectionProps) => {
   return (
-    <SectionMotion className="py-24" id="contact">
+    <SectionMotion className="my-8 md:py-24" id="contact">
       <Title tag="h2" className="mb-10 mx-auto text-center">
         {t('contact-section.title')}
       </Title>

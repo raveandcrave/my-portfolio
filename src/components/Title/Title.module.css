@@ -1,5 +1,5 @@
 .h1 {
-  @apply text-cyclamen text-7xl font-semibold;
+  @apply text-cyclamen text-4xl md:text-7xl font-semibold;
 }
 
 .h2 {

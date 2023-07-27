@@ -20,7 +20,7 @@ const Up = () => {
   };
 
   return (
-    <motion.div initial={{opacity: 0}} animate={controls} className="fixed right-24 bottom-24">
+    <motion.div initial={{opacity: 0}} animate={controls} className="fixed bottom-3 right-2 md:right-24 md:bottom-24">
       <Button
         onClick={scrollToTop}
         className="bg-sky-50 hover:bg-sky-100 dark:bg-slate-700 dark:hover:bg-slate-600"

@@ -28,7 +28,7 @@ const experiences: Experience[] = [
 
 const ExperienceSection = ({t}: ExperienceSectionProps) => {
   return (
-    <SectionMotion className="py-24 mx-auto" id="experience">
+    <SectionMotion className="py-8 md:py-24 mx-auto" id="experience">
       <Title tag="h2" className="mb-10">
         {t('experience-section.title')}
       </Title>

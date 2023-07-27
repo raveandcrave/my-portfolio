@@ -9,7 +9,7 @@ const ExperienceItemMotion = ({children, custom}: ExperienceItemMotionProps) => 
     <motion.div
       variants={experienceListVariants}
       custom={custom}
-      className="col-span-2 even:col-start-2 p-5 rounded shadow-xl bg-sky-50 dark:bg-slate-700">
+      className="col-span-3 md:col-span-2 md:even:col-start-2 p-5 rounded shadow-xl bg-sky-50 dark:bg-slate-700">
       {children}
     </motion.div>
   );

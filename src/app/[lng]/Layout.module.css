@@ -1,10 +1,24 @@
 .wrapper {
-  gap: 0 120px;
+  @apply grid md:gap-x-32 md:gap-y-0 gap-x-16 overflow-hidden;
   grid-template:
     'header header header' auto
     '. main .' 1fr
     'footer footer footer' auto / auto minmax(320px, 1200px) auto;
   display: grid;
+}
+
+@media (width <= 765px) {
+  .wrapper {
+    grid-template-columns: minmax(320px, 1fr);
+    grid-template-areas:
+      'header'
+      'main'
+      'footer';
+  }
+
+  .main {
+    padding: 0 1rem;
+  }
 }
 
 .header {

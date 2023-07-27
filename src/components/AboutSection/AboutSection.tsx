@@ -21,12 +21,12 @@ const skills = [
 
 const AboutSection = ({t}: AboutSectionProps) => {
   return (
-    <SectionMotion className="py-24" id="about">
+    <SectionMotion className="py-8 md:py-24" id="about">
       <Title tag="h2" className="mb-10">
         {t('about-section.title')}
       </Title>
-      <div className="grid gap-12 grid-cols-5">
-        <div className="col-span-3 border-l-4 border-cyclamen pl-6">
+      <div className="grid gap-12 md:grid-cols-5">
+        <div className="md:col-span-3 border-l-4 border-cyclamen pl-6">
           <p className="mb-5">{t('about-section.description')}</p>
           <p className="mb-5">{t('about-section.skills-title')}</p>
           <ul className={styles.skillsList}>
@@ -37,7 +37,7 @@ const AboutSection = ({t}: AboutSectionProps) => {
             ))}
           </ul>
         </div>
-        <div className="col-span-2">
+        <div className="md:col-span-2">
           <div className="bg-cyclamen rounded">
             <Image
               src={Papich}
