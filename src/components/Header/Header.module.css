@@ -1,5 +1,5 @@
 .header {
-  @apply bg-sky-100 p-5 md:px-10 md:h-20 grid md:grid-cols-header gap-3 md:fixed absolute top-0 left-0 right-0 z-10 shadow-lg;
+  @apply bg-sky-100 p-5 md:px-10 grid md:grid-cols-header gap-3 md:fixed absolute top-0 left-0 right-0 z-10 shadow-lg;
 }
 
 .menu {

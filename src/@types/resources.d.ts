@@ -4,9 +4,12 @@ interface Resources {
     experience: 'experience';
     contact: 'contact';
     resume: 'resume';
+    openMenu: 'Open menu';
+    closeMenu: 'Close menu';
   };
   meta: {
     title: 'Viktor Kopan Frontend developer';
+    description: 'I develop web applications on React Next.js. I will help you improve your product';
   };
   translation: {
     'title-section': {

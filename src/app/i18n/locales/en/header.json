@@ -2,5 +2,7 @@
   "about": "about",
   "experience": "experience",
   "contact": "contact",
-  "resume": "Resume"
+  "resume": "Resume",
+  "openMenu": "Open menu",
+  "closeMenu": "Close menu"
 }

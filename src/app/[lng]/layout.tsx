@@ -31,6 +31,7 @@ export async function generateMetadata({
 
   return {
     title: t('title'),
+    description: t('description'),
     // openGraph: {
     //   images: ['/some-specific-page-image.jpg', ...previousImages],
     // }, мое фото
@@ -51,7 +52,7 @@ export default function RootLayout({
   };
 }) {
   return (
-    <html lang={lng} dir={dir(lng)} suppressHydrationWarning>
+    <html lang={lng} dir={dir(lng)}>
       <Providers lng={lng}>
         <body className={inter.className}>
           <div className={styles.wrapper}>

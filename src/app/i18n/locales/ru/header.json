@@ -2,5 +2,7 @@
   "about": "обо мне",
   "experience": "опыт",
   "contact": "связаться",
-  "resume": "Резюме"
+  "resume": "Резюме",
+  "openMenu": "Открыть меню",
+  "closeMenu": "Зыкрыть меню"
 }

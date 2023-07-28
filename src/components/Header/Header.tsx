@@ -71,7 +71,7 @@ const Header = ({lang, className}: HeaderProps) => {
 
   return (
     <>
-      <Button className="absolute right-5 top-5 md:hidden" onClick={() => setIsOpened(true)}>
+      <Button className="absolute right-5 top-5 md:hidden" aria-label={t('openMenu')} onClick={() => setIsOpened(true)}>
         <MenuIcon className="fill-black-custom dark:fill-green-200" />
       </Button>
       <motion.header
@@ -79,13 +79,22 @@ const Header = ({lang, className}: HeaderProps) => {
         initial="closed"
         animate={isOpened ? 'opened' : 'closed'}
         className={cn(styles.header, 'dark:bg-slate-700', className)}>
-        <Button className="absolute right-5 top-5 md:hidden" onClick={() => setIsOpened(false)}>
+        <Button
+          className="absolute right-5 top-5 md:hidden"
+          aria-label={t('closeMenu')}
+          onClick={() => setIsOpened(false)}>
           <CloseIcon className="fill-black-custom dark:fill-green-200" />
         </Button>
         <nav className="grid items-center gap-5 grid-cols-1 md:grid-cols-2 row-start-2 md:row-start-1">
           <ul className={styles.menu}>
             {menu.map((item, i) => (
-              <motion.li initial="hidden" animate="visible" variants={navVariants} custom={i + 1} key={item}>
+              <motion.li
+                initial="hidden"
+                animate="visible"
+                variants={navVariants}
+                custom={i + 1}
+                key={item}
+                className="md:justify-self-center">
                 <a
                   tabIndex={0}
                   className={cn(styles.menuLink, 'dark:hover:text-green-200')}

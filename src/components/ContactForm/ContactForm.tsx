@@ -61,15 +61,21 @@ const ContactForm = () => {
   return (
     <form className="grid grid-cols-1 gap-6 md:w-1/2 md:mx-auto" onSubmit={handleSubmit(onSubmit)}>
       <Input
+        aria-invalid={!!errors.name}
+        aria-errormessage={errors.name?.message}
         placeholder={t('contact-section.name')}
         error={errors.name}
+        aria-label={t('contact-section.name')}
         {...register('name', {
           required: {value: true, message: t('contact-section.required.name')},
           maxLength: {value: 32, message: `${t('contact-section.maxLength')} 32`},
         })}
       />
       <Input
+        aria-invalid={!!errors.email}
+        aria-errormessage={errors.email?.message}
         placeholder={t('contact-section.email')}
+        aria-label={t('contact-section.email')}
         error={errors.email}
         {...register('email', {
           required: {value: true, message: t('contact-section.required.email')},
@@ -77,8 +83,11 @@ const ContactForm = () => {
         })}
       />
       <Textarea
+        aria-invalid={!!errors.message}
+        aria-errormessage={errors.message?.message}
         rows={4}
         placeholder={t('contact-section.message')}
+        aria-label={t('contact-section.message')}
         maxLength={512}
         error={errors.message}
         {...register('message', {
