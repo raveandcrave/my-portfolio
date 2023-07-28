@@ -14,11 +14,6 @@ import {useTranslation} from '../i18n';
 
 const inter = Inter({subsets: ['latin', 'cyrillic']});
 
-export const metadata = {
-  title: 'Viktor Kopan',
-  description: 'Frontend developer portfolio',
-};
-
 export async function generateMetadata({
   params: {lng},
 }: {

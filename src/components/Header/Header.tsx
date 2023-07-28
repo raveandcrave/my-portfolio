@@ -59,7 +59,7 @@ const Header = ({lang, className}: HeaderProps) => {
     }
   }, [width]);
 
-  const handleKey = (e: KeyboardEvent<HTMLAnchorElement>, item: string) => {
+  const handleKey = (e: KeyboardEvent<HTMLDivElement>, item: string) => {
     if (e.code === 'Space' || e.code === 'Enter') {
       scrollToSection(item);
     }
@@ -95,13 +95,13 @@ const Header = ({lang, className}: HeaderProps) => {
                 custom={i + 1}
                 key={item}
                 className="md:justify-self-center">
-                <a
+                <div
                   tabIndex={0}
                   className={cn(styles.menuLink, 'dark:hover:text-green-200')}
                   onClick={() => scrollToSection(item)}
                   onKeyDown={(e) => handleKey(e, item)}>
                   <span className="text-cyclamen dark:text-green-200">0{i + 1}.</span> {t(item)}
-                </a>
+                </div>
               </motion.li>
             ))}
           </ul>

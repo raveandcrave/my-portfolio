@@ -19,7 +19,11 @@ const Footer = ({className}: {className: string}) => {
       <div className={styles.social}>
         <ul className={`${styles.socialList} dark:after:bg-slate-400`}>
           <li className={styles.socialListItem}>
-            <a href="https://github.com/raveandcrave" target="_blank" className={`group ${styles.socialLink}`}>
+            <a
+              href="https://github.com/raveandcrave"
+              aria-label="My github"
+              target="_blank"
+              className={`group ${styles.socialLink}`}>
               <GithubIcon
                 className={`${styles.socialIcon} group-hover:fill-cyclamen group-hover:-translate-y-2 dark:fill-slate-300 dark:group-hover:fill-green-200`}
                 width={25}
@@ -28,7 +32,10 @@ const Footer = ({className}: {className: string}) => {
             </a>
           </li>
           <li className={styles.socialListItem}>
-            <a href="#" className={`group ${styles.socialLink}`}>
+            <a
+              href="https://www.linkedin.com/in/viktor-kopan/"
+              aria-label="My LinkedIn"
+              className={`group ${styles.socialLink}`}>
               <LinkedinIcon
                 className={`${styles.socialIcon} group-hover:fill-cyclamen group-hover:-translate-y-2 dark:fill-slate-300 dark:group-hover:fill-green-200`}
                 width={25}
@@ -37,7 +44,11 @@ const Footer = ({className}: {className: string}) => {
             </a>
           </li>
           <li className={styles.socialListItem}>
-            <a href="https://www.instagram.com/rave_and_crave" target="_blank" className={`group ${styles.socialLink}`}>
+            <a
+              href="https://www.instagram.com/rave_and_crave"
+              aria-label="My Instagram"
+              target="_blank"
+              className={`group ${styles.socialLink}`}>
               <InstagramIcon
                 className={`${styles.socialIcon} group-hover:fill-cyclamen group-hover:-translate-y-2 dark:fill-slate-300 dark:group-hover:fill-green-200`}
                 width={25}
