@@ -7,7 +7,7 @@
   },
   "about-section": {
     "title": "About Me",
-    "description": "Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей. Текст генерируется абзацами случайным образом от двух до десяти предложений в абзаце, что позволяет сделать текст более привлекательным и живым для визуально-слухового восприятия.",
+    "description": "I am a front-end developer with over a year of experience. I like to create convenient and beautiful interfaces. The result of my work brings me real pleasure. I am always open to new knowledge and technologies. I would love to gain experience with Next.js, GraphQL and React Native. In my spare time from development, I enjoy playing the guitar, doing CrossFit and riding a bike. I believe that my personal interests inspire me to be creative and help me find non-standard solutions in my work.",
     "skills-title": "Here are the technologies I work with:",
     "image-alt": "Фото"
   },
