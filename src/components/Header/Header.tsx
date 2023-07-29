@@ -105,14 +105,16 @@ const Header = ({lang, className}: HeaderProps) => {
               </motion.li>
             ))}
           </ul>
-          <Button
-            initial="hidden"
-            animate="visible"
-            variants={navVariants}
-            custom={menu.length - 1}
-            className="justify-self-start">
-            {t('resume')}
-          </Button>
+          <a target="_blank" href="/viktor_kopan_ru.pdf">
+            <Button
+              initial="hidden"
+              animate="visible"
+              variants={navVariants}
+              custom={menu.length - 1}
+              className="justify-self-start">
+              {t('resume')}
+            </Button>
+          </a>
         </nav>
         <div className="md:justify-self-end flex gap-5 items-center row-start-1 md:row-start-1">
           <ThemeSwitcher />

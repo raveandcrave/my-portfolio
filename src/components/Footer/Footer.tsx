@@ -35,6 +35,7 @@ const Footer = ({className}: {className: string}) => {
             <a
               href="https://www.linkedin.com/in/viktor-kopan/"
               aria-label="My LinkedIn"
+              target="_blank"
               className={`group ${styles.socialLink}`}>
               <LinkedinIcon
                 className={`${styles.socialIcon} group-hover:fill-cyclamen group-hover:-translate-y-2 dark:fill-slate-300 dark:group-hover:fill-green-200`}

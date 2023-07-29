@@ -5,7 +5,7 @@ import {fallbackLng, languages} from './app/i18n/settings';
 acceptLanguage.languages(languages);
 
 export const config = {
-  matcher: '/:lang*',
+  matcher: '/:lng*',
 };
 
 const cookieName = 'i18next';

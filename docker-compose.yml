@@ -2,7 +2,7 @@ version: '3'
 services:
   app:
     image: ghcr.io/raveandcrave/my-portfolio:main
-    container_name: Viktor's profile
+    container_name: viktor-profile
     restart: always
     ports:
       - 3000:3000
