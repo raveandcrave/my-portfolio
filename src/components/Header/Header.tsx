@@ -1,6 +1,6 @@
 'use client';
-import {KeyboardEvent, useState, useEffect} from 'react';
-import {useWindowSize} from 'usehooks-ts';
+import {KeyboardEvent, useState, useEffect, useRef} from 'react';
+import {useWindowSize, useOnClickOutside} from 'usehooks-ts';
 import cn from 'classnames';
 import {motion, Variants} from 'framer-motion';
 import ThemeSwitcher from '../ThemeSwitcher/ThemeSwitcher';
@@ -20,6 +20,16 @@ const Header = ({lang, className}: HeaderProps) => {
   const [isOpened, setIsOpened] = useState<boolean>(false);
   const [isMobileWidth, setMobileWidth] = useState<boolean>(false);
   const {width} = useWindowSize();
+
+  const refHeader = useRef(null);
+
+  const handleClickOutside = () => {
+    if (isOpened) {
+      setIsOpened(false);
+    }
+  };
+
+  useOnClickOutside(refHeader, handleClickOutside);
 
   const navVariants: Variants = {
     hidden: {
@@ -75,6 +85,7 @@ const Header = ({lang, className}: HeaderProps) => {
         <MenuIcon className="fill-black-custom dark:fill-green-200" />
       </Button>
       <motion.header
+        ref={refHeader}
         variants={isMobileWidth ? mobileMenuVariants : {}}
         initial="closed"
         animate={isOpened ? 'opened' : 'closed'}
