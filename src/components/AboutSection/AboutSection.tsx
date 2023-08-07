@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Title from '@/components/Title/Title';
 import styles from './AboutSection.module.css';
-import Papich from '@/assets/papich.jpg';
+import Photo from '@/assets/photo.jpg';
 import FireIcon from './fire.svg?svgr';
 import SectionMotion from '@/components/SectionMotion/SectionMotion';
 import {AboutSectionProps} from './Aboutsection.props';
@@ -40,7 +40,7 @@ const AboutSection = ({t}: AboutSectionProps) => {
         <div className="md:col-span-2">
           <div className="bg-cyclamen rounded">
             <Image
-              src={Papich}
+              src={Photo}
               alt={t('about-section.image-alt')}
               className="rounded transition-transform hover:-translate-x-2 hover:-translate-y-2"
             />
